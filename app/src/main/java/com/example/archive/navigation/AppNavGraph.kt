@@ -4,9 +4,9 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.arche.app.ui.wardrobe.WardrobeScreen
-import com.arche.app.ui.outfits.OutfitsScreen
-import com.arche.app.ui.planner.PlannerScreen
+import com.example.archive.ui.wardrobe.WardrobeScreen
+import com.example.archive.ui.outfits.OutfitsScreen
+import com.example.archive.ui.planner.PlannerScreen
 
 @Composable
 fun AppNavGraph(navController: NavHostController) {
