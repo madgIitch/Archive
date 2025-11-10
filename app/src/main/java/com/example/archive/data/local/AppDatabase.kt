@@ -2,12 +2,12 @@ package com.example.archive.data.local
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
-import com.arche.app.data.local.dao.ItemDao
-import com.arche.app.data.local.dao.OutfitDao
-import com.arche.app.data.local.entities.ItemEntity
-import com.arche.app.data.local.entities.OutfitEntity
-import com.arche.app.data.local.entities.OutfitItemCrossRef
-import com.arche.app.data.local.entities.PlannerEntity
+import com.example.app.data.local.dao.ItemDao
+import com.example.app.data.local.dao.OutfitDao
+import com.example.app.data.local.entities.ItemEntity
+import com.example.app.data.local.entities.OutfitEntity
+import com.example.app.data.local.entities.OutfitItemCrossRef
+import com.example.app.data.local.entities.PlannerEntity
 import com.example.archive.data.local.dao.ItemDao
 import com.example.archive.data.local.entities.ItemEntity
 

@@ -2,7 +2,7 @@ package com.example.archive.data.local.dao
 
 
 import androidx.room.*
-import com.arche.app.data.local.entities.ItemEntity
+import com.example.archive.data.local.entities.ItemEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao
