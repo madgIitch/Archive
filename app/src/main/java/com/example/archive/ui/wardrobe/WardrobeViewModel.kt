@@ -2,7 +2,7 @@ package com.example.archive.ui.wardrobe
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.archive.data.local.dao.ItemDao
+import com.example.archive.data.repository.ItemRepository
 import com.example.archive.data.local.entities.ItemEntity
 import kotlinx.coroutines.flow.SharingStarted
 import kotlinx.coroutines.flow.StateFlow
@@ -11,10 +11,10 @@ import kotlinx.coroutines.launch
 import java.util.UUID
 
 class WardrobeViewModel(
-    private val itemDao: ItemDao
+    private val repository: ItemRepository  // Cambiar de itemDao a repository
 ) : ViewModel() {
 
-    val items: StateFlow<List<ItemEntity>> = itemDao.getAllItems()
+    val items: StateFlow<List<ItemEntity>> = repository.getAllItems()
         .stateIn(
             scope = viewModelScope,
             started = SharingStarted.WhileSubscribed(5000),
@@ -30,13 +30,13 @@ class WardrobeViewModel(
                 imageUri = imageUri,
                 createdAt = System.currentTimeMillis()
             )
-            itemDao.insertItem(item)
+            repository.insertItem(item)
         }
     }
 
     fun deleteItem(item: ItemEntity) {
         viewModelScope.launch {
-            itemDao.deleteItem(item)
+            repository.deleteItem(item)
         }
     }
 }
